@@ -1,25 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react"
+import "./App.css"
+import albums from "./data/albums.js"
+import AlbumCard from "./AlbumCard"
+import Header from "./Header"
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+      {/* Let's try to move this header tag into a separate component */}
+      {/* and pass the header title as a prop */}
+      {/* tip:  you don't need curly braces to pass a string as a prop */}
+      <header className="header">
+        <h1>My Album Collection</h1>
       </header>
+      <div className="container">
+        <AlbumCard />
+      </div>
     </div>
-  );
+  )
 }
-
-export default App;
+export default App
